@@ -4,29 +4,27 @@ Created on Wed Apr  8 17:15:42 2020
 
 @author: Tiange
 """
-##Student Name:Tiange Hou
-##student ID:500 868 312
-
 #pip install Pillow
 
 import PIL
 import numpy as np
 from PIL import Image
 from numpy import asarray
-image_list=[]#creat a list for image
+#image_list=[]#creat a list for image
 #function insert
+
+image_lenna=Image.open('C:/Users/Tiange/Desktop/testimage.jpg')
+
 def refelction_change():
-    number=int(input("Please enter a number between -50 and 50: "))
+    number=int(input("Please enter a percentage between -50 and 50: "))
     direction=input("please enter v for vertial or h for horziontal")
     image_path=input("please enter the image path")
     
     while number<-50 or number> 50:
-        number=int(input("Please enter a number between -50 and 50: "))
+        number=int(input("Please enter a percentage between -50 and 50: "))
     while direction not in ('v','h'):
         direction=input("please enter v for vertial or h for horziontal")
     percentage=number
-    #print(percentage)
-    #print(direction)
     im=Image.open(image_path)
     #im.show()
  
@@ -128,18 +126,18 @@ def refelction_change():
     save_or_not=save_or_not.upper()
     if save_or_not=='Y':
         final_image=final_image.save("reflection.jpg")
-        print("Your image has been saved ")        
+        print("Your image has been saved as reflection.jpg")        
     else:
         #final_image.show()
         return new_list_array    
 
 
 def change_threshold():
-    defined_threshold=int(input("Please enter a number between 0 and 255: "))
+    defined_threshold=int(input("Please enter a percentage between 0 and 255: "))
     image_path=input("please enter the image path")
     
     while defined_threshold< 0 or defined_threshold> 255:
-        defined_threshold=int(input("Please enter a number between 0 and 255: "))
+        defined_threshold=int(input("Please enter a percentage between 0 and 255: "))
     im=Image.open(image_path)
     #im.show()
     
@@ -172,10 +170,11 @@ def change_threshold():
     from_array_to_img_thre.show()
     
     save_or_not=str(input("if you want to save the image, please enter Y/N:"))
+    save_or_not=save_or_not.upper()
     if save_or_not=='Y':
         from_array_to_img_thre = from_array_to_img_thre.convert("RGB")
         from_array_to_img_thre=from_array_to_img_thre.save("threshold.jpg")
-        print("Your image has been saved ")
+        print("Your image has been saved as threshold.jpg ")
     else:
         return rrshaped_test_list_to_array_bw
 
@@ -191,7 +190,7 @@ def reflection_rgb():
     image_path=input("please enter the image path")
     
     while number<-50 or number> 50:
-        number=int(input("Please enter a number between -50 and 50: "))
+        number=int(input("Please enter a percentage between -50 and 50: "))
     while direction not in ('v','h'):
         direction=input("please enter v for vertial or h for horziontal")
     im=Image.open(image_path)
@@ -271,12 +270,11 @@ def reflection_rgb():
         from_array_to_img.show()
     #return rrshaped_test_list_to_array_bw
     save_or_not=str(input("if you want to save the image as reflectionRGB.jpg, please enter Y/N:"))
+    save_or_not=save_or_not.upper()
     if save_or_not=='Y':
         #image_name=input("please enter file name you want to use")
         from_array_to_img=from_array_to_img.save("reflection.jpg")
         #image_list.append(image_name)
-        print("Your image has been saved")
+        print("Your image has been saved as refelctionRGB.jpg")
     else:
-        return final_array             
-
-
+        return final_array         
