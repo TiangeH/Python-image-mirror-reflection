@@ -4,7 +4,8 @@ Image Processing Toolkit
 A collection of custom image‑processing functions built using Python, NumPy, and PIL.
 
 Overview
-This project contains three image‑processing tools I originally wrote almost 6 years ago by the time no AI. Today is May 18, 2026. I am using AI to help me add notes to give a descrition about my script.
+This project contains three image‑processing tools I originally wrote almost 6 years ago by the time no AI. 
+Today is May 18, 2026. I am using AI to help me add notes to give a descrition about my script.
 Each function manipulates images at the pixel‑array level, using NumPy to reshape, slice, reverse, and reconstruct images manually.
 
 The toolkit includes:
