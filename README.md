@@ -131,9 +131,7 @@ RGB Reflection:
 Excample (-40,V)
 A pink lotus reflected vertically in full color.
 
-
-
-🎯 Purpose of This Project
+Purpose of This Project
 This project showcases early image‑processing techniques implemented manually:
 Pixel‑level manipulation
 Array slicing and reversing
@@ -141,6 +139,9 @@ Thresholding logic
 RGB and grayscale handling
 User‑interactive command‑line tools
 It highlights algorithmic thinking and foundational understanding of how images are represented as numerical arrays.
+
+Image is from 
+https://windflowerflorist.com/blogs/news/lotus-flowers-meaning
 
 
 
